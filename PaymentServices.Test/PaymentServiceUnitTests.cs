@@ -66,7 +66,6 @@ public class PaymentServicesUnitTests
         dataStore!.Accounts.AddRange(new Account[] { firstAccount, secondAccount, thirdAccount });
     }
 
-    //todo:backup
     [Test]
     public void ShouldBackUpDsataStoreReturnsAccount()
     {
@@ -88,7 +87,6 @@ public class PaymentServicesUnitTests
         };
 
         var account = dataStore!.GetAccount(request.DebtorAccountNumber);
-        //var type1 = account.GetType().BaseType.TypeInitializer;
 
         Assert.AreEqual(firstAccount.AccountNumber, account.AccountNumber);
     }
@@ -129,7 +127,6 @@ public class PaymentServicesUnitTests
         Assert.IsFalse(result.Success);
     }
 
-    //todo: when isvalid is false
     [Test]
     public void ShouldPaymentFailsWhenIsValidAccountStateIsFalse()
     {
