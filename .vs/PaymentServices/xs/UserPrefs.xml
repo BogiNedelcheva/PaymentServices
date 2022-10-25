@@ -1,0 +1,57 @@
+﻿<Properties StartupConfiguration="{9BF9DE67-2C39-46B4-940B-AF3BF2AAAD4C}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/bogdana.peeva/Projects/PaymentServices/PaymentServices.Test/PaymentServiceUnitTests.cs" relfile="PaymentServices.Test/PaymentServiceUnitTests.cs" line="96" column="1" />
+      <Breakpoint file="/Users/bogdana.peeva/Projects/PaymentServices/PaymentServices.Test/PaymentServiceUnitTests.cs" relfile="PaymentServices.Test/PaymentServiceUnitTests.cs" line="133" column="1" />
+      <Breakpoint file="/Users/bogdana.peeva/Projects/PaymentServices/PaymentServices/Services/PaymentService.cs" relfile="PaymentServices/Services/PaymentService.cs" line="15" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.PaymentServices.Test PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PaymentServices/IDataStoreCreator.cs">
+    <Files>
+      <File FileName="PaymentServices.Test/PaymentValidatorTests.cs" Line="36" Column="63" IsPinned="True" />
+      <File FileName="PaymentServices/Services/PaymentService.cs" Line="12" Column="22" IsPinned="True" />
+      <File FileName="PaymentServices/DataStoreCreator.cs" Line="14" Column="2" />
+      <File FileName="PaymentServices/Services/AccountService.cs" Line="13" Column="33" NotebookId="1" IsPinned="True" />
+      <File FileName="PaymentServices.Test/PaymentServiceUnitTests.cs" Line="24" Column="35" NotebookId="1" />
+      <File FileName="PaymentServices/AccountDataStoreCreator.cs" Line="9" Column="64" NotebookId="1" />
+      <File FileName="PaymentServices/BackupDataStoreCreator.cs" Line="9" Column="38" NotebookId="1" />
+      <File FileName="PaymentServices/Data/BackupAccountDataStore.cs" Line="6" Column="58" NotebookId="1" />
+      <File FileName="PaymentServices/Data/IDataStore.cs" Line="7" Column="6" NotebookId="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PaymentServices" expanded="True">
+            <Node name="PaymentServices" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Types" expanded="True" />
+            </Node>
+            <Node name="PaymentServices.Test" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="PaymentServices" expanded="True">
+            <Node name="PaymentServices.Test" expanded="True">
+              <Node name="PaymentServices.Test" expanded="True">
+                <Node name="PaymentServicesUnitTests" expanded="True" />
+                <Node name="PaymentValidatorUnitTests" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

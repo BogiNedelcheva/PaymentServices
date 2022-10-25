@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/PaymentServices.Test.csproj": {}
+  },
+  "projects": {
+    "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/PaymentServices.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/PaymentServices.Test.csproj",
+        "projectName": "PaymentServices.Test",
+        "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/PaymentServices.Test.csproj",
+        "packagesPath": "/Users/bogdana.peeva/.nuget/packages/",
+        "outputPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bogdana.peeva/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj": {
+                "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.11.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj",
+        "projectName": "PaymentServices",
+        "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj",
+        "packagesPath": "/Users/bogdana.peeva/.nuget/packages/",
+        "outputPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/bogdana.peeva/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
