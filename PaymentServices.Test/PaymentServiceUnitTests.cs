@@ -78,8 +78,6 @@ public class PaymentServicesUnitTests
 
         this.paymentService = new PaymentService(paymentValidator!, dataStore!);
 
-        //this.paymentService = new PaymentService(paymentValidator!, backupAccountDataStore!);
-
         dataStore!.Accounts.Add(firstAccount!);
 
         MakePaymentRequest request = new MakePaymentRequest()
@@ -93,8 +91,6 @@ public class PaymentServicesUnitTests
 
         var account = dataStore!.GetAccount(request.DebtorAccountNumber);
         //var type1 = account.GetType().BaseType.TypeInitializer;
-        //var type2 = account.GetType().GetType;
-        //var type3 = account.GetType().TypeInitializer;
 
         Assert.AreEqual(firstAccount.AccountNumber, account.AccountNumber);
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2n6vmUdenbDdzIsFDYo7jxdCb5qvU/RRaShsTSG5KGfmHIUgbiCwCVY6oMU7lM2NNiIAHlxcuRGoadLjYAm0cQ==",
+  "dgSpecHash": "wZwlCPVcJ7zpWR97/ctpf+MUFMuakFEykPHKBHtZVq8bTl+4OaEmEil5KAiNG9mNwn4vF8qDw4Y1cUlvZBm1Pg==",
   "success": true,
-  "projectFilePath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/PaymentServices.Test.csproj",
+  "projectFilePath": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/PaymentServices.Test.csproj",
   "expectedPackageFiles": [
     "/Users/bogdana.peeva/.nuget/packages/coverlet.collector/3.1.0/coverlet.collector.3.1.0.nupkg.sha512",
     "/Users/bogdana.peeva/.nuget/packages/microsoft.codecoverage/16.11.0/microsoft.codecoverage.16.11.0.nupkg.sha512",

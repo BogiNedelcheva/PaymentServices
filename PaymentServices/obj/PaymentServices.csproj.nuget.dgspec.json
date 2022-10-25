@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj": {}
+    "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/PaymentServices.csproj": {}
   },
   "projects": {
-    "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj": {
+    "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/PaymentServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj",
+        "projectUniqueName": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/PaymentServices.csproj",
         "projectName": "PaymentServices",
-        "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj",
+        "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/PaymentServices.csproj",
         "packagesPath": "/Users/bogdana.peeva/.nuget/packages/",
-        "outputPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/obj/",
+        "outputPath": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/bogdana.peeva/.nuget/NuGet/NuGet.Config"

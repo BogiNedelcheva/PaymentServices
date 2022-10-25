@@ -11,15 +11,11 @@ public class PaymentService : IPaymentService
     private readonly IPaymentValidator paymentValidator;
     private readonly IDataStore dataStore;
 
-    //todo:
     public PaymentService(IPaymentValidator paymentValidator, IDataStore dataStore)
     {
         this.paymentValidator = paymentValidator;
         this.dataStore = dataStore;
 
-        //this.dataStore = ConfigurationManager.AppSettings["DataStoreType"] == "Backup" ?
-        //        new BackupAccountDataStore() :
-        //        new AccountDataStore();
     }
 
     public MakePaymentResult MakePayment(MakePaymentRequest request)
@@ -43,5 +39,4 @@ public class PaymentService : IPaymentService
         return result;
 
     }
-
 }

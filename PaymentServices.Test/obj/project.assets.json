@@ -4217,11 +4217,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/PaymentServices.Test.csproj",
+      "projectUniqueName": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/PaymentServices.Test.csproj",
       "projectName": "PaymentServices.Test",
-      "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/PaymentServices.Test.csproj",
+      "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/PaymentServices.Test.csproj",
       "packagesPath": "/Users/bogdana.peeva/.nuget/packages/",
-      "outputPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/obj/",
+      "outputPath": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/bogdana.peeva/.nuget/NuGet/NuGet.Config"
@@ -4236,8 +4236,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj": {
-              "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj"
+            "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/PaymentServices.csproj": {
+              "projectPath": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/PaymentServices.csproj"
             }
           }
         }

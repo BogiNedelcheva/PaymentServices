@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MzRzSsG7ShDAEvhEUvx+dS/xiyVmoAwq3y66vZHKLepK9yTew7uAznnOgccA9aNF1cM/IjG53PSe54LYk8cuPw==",
+  "dgSpecHash": "Z6UQKn2S9vtBxpfwyHx8W0esGMhETju3+dFdRnwANVB67lq7trc1bEyxr+exgBk1bsofODdFg7RRni6LNSJ7ow==",
   "success": true,
-  "projectFilePath": "/Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices/PaymentServices.csproj",
+  "projectFilePath": "/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices/PaymentServices.csproj",
   "expectedPackageFiles": [
     "/Users/bogdana.peeva/.nuget/packages/microsoft.win32.systemevents/6.0.0/microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "/Users/bogdana.peeva/.nuget/packages/system.configuration.configurationmanager/6.0.1/system.configuration.configurationmanager.6.0.1.nupkg.sha512",
