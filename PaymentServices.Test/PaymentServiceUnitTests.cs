@@ -23,7 +23,7 @@ public class PaymentServicesUnitTests
     private IPaymentService? paymentService;
 
     private IDataStore? dataStore;
-
+    private IDataStoreFactory? dataStoreFactory;
     private Account? firstAccount;
     private Account? secondAccount;
     private Account? thirdAccount;
@@ -31,13 +31,13 @@ public class PaymentServicesUnitTests
     [SetUp]
     public void Setup()
     {
-        var accountDataStoreFactory  = new AccountDataStoreFactory();
+        this.dataStoreFactory = new DataStoreFactory();
 
-        this.dataStore = accountDataStoreFactory!.CreateDataStore(ACCOUNT_DATASTORE_TYPE);
+        this.dataStore = dataStoreFactory!.CreateDataStore(ACCOUNT_DATASTORE_TYPE);
 
         this.paymentValidator = new PaymentValidator(dataStore);
 
-        this.paymentService = new PaymentService(paymentValidator,dataStore);
+        this.paymentService = new PaymentService(paymentValidator, dataStore);
 
         firstAccount = new Account()
         {
@@ -70,10 +70,8 @@ public class PaymentServicesUnitTests
     [Test]
     public void ShouldBackUpDsataStoreReturnsAccount()
     {
-        var backupAccountDataStoreFactory = new BackupDataStoreFactory();
+        var backupDataStoreFactory = dataStoreFactory!.CreateDataStore(BACKUP_ACCOUNT_DATASTORE_TYPE);
 
-        this.dataStore
-            = backupAccountDataStoreFactory.CreateDataStore(BACKUP_ACCOUNT_DATASTORE_TYPE);
         this.paymentValidator = new PaymentValidator(dataStore!);
 
         this.paymentService = new PaymentService(paymentValidator!, dataStore!);
@@ -197,6 +195,6 @@ public class PaymentServicesUnitTests
 
         //Assert.AreNotEqual(account, updatedAccount.Balance);
 
-        Assert.AreEqual(expected,updatedAccount.Balance);
+        Assert.AreEqual(expected, updatedAccount.Balance);
     }
 }

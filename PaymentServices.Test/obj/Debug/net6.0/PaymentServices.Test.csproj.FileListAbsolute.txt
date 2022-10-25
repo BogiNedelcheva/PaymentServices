@@ -223,13 +223,13 @@
 /Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/obj/Debug/net6.0/PaymentServices.Test.genruntimeconfig.cache
 /Users/bogdana.peeva/Projects/PaymentServices copy 2/PaymentServices.Test/obj/Debug/net6.0/ref/PaymentServices.Test.dll
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/CoverletSourceRootsMapping
+/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/Microsoft.TestPlatform.PlatformAbstractions.dll
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/NUnit3.TestAdapter.dll
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/NUnit3.TestAdapter.pdb
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/nunit.engine.dll
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/nunit.engine.api.dll
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/nunit.engine.core.dll
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/testcentric.engine.metadata.dll
-/Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/Microsoft.TestPlatform.PlatformAbstractions.dll
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/PaymentServices.Test.deps.json
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/PaymentServices.Test.runtimeconfig.json
 /Users/bogdana.peeva/Projects/PaymentServices /PaymentServices.Test/bin/Debug/net6.0/PaymentServices.Test.dll

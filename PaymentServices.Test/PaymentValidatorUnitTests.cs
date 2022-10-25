@@ -29,7 +29,7 @@ public class PaymentValidatorUnitTests
     [SetUp]
     public void Setup()
     {
-        var accountDataStoreFactory = new AccountDataStoreFactory();
+        var accountDataStoreFactory = new DataStoreFactory();
 
         this.dataStore = accountDataStoreFactory!.CreateDataStore(ACCOUNT_DATASTORE_TYPE);
 
@@ -93,9 +93,6 @@ public class PaymentValidatorUnitTests
     }
 
     [Test]
-    [TestCase(AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
-    [TestCase(AccountStatus.Disabled, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
-
     // fails next  rows
     //[TestCase(AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
     //[TestCase(AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
@@ -107,6 +104,8 @@ public class PaymentValidatorUnitTests
     //[TestCase(AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
     //[TestCase(AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
 
+    [TestCase(AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
+    [TestCase(AccountStatus.Disabled, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
     public void ShouldIsValidAccountStateReturnsFalseWhenAccountStatusIsNotValid(AccountStatus accountStatus, AllowedPaymentSchemes allowedPaymentSchemes, PaymentScheme scheme)
     {
         firstAccount!.Status = accountStatus;
@@ -210,44 +209,43 @@ public class PaymentValidatorUnitTests
 
     [Test]
     [TestCase(-1, AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
+    [TestCase(0, AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
+    [TestCase(6.5, AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
+    [TestCase(7, AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
+
     [TestCase(-1, AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(0, AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(6.5, AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(7, AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
 
     [TestCase(-1, AccountStatus.Disabled, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(0, AccountStatus.Disabled, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(6.5, AccountStatus.Disabled, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(7, AccountStatus.Disabled, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+
     [TestCase(-1, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(0, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(6.5, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(7, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
 
     // next rows fails
     //[TestCase(-1,AccountStatus.Live, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
-    //[TestCase(-1,AccountStatus.Disabled, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
-    //[TestCase(-1,AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
     //[TestCase(0, AccountStatus.Live, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
+
+    //[TestCase(-1,AccountStatus.Disabled, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
     //[TestCase(0, AccountStatus.Disabled, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
+
+    //[TestCase(-1,AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
     //[TestCase(0, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
 
-    [TestCase(0, AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
-    [TestCase(0, AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
 
-    [TestCase(0, AccountStatus.Disabled, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
-
-    [TestCase(0, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
-
-    [TestCase(6.5, AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
-    [TestCase(6.5, AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
     [TestCase(6.5, AccountStatus.Live, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
-
-    [TestCase(6.5, AccountStatus.Disabled, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
-    [TestCase(6.5, AccountStatus.Disabled, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
-
-    [TestCase(6.5, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
-    [TestCase(6.5, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
-
-    [TestCase(7, AccountStatus.Live, AllowedPaymentSchemes.Chaps, PaymentScheme.Chaps)]
-    [TestCase(7, AccountStatus.Live, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
     [TestCase(7, AccountStatus.Live, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
 
-    [TestCase(7, AccountStatus.Disabled, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(6.5, AccountStatus.Disabled, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
     [TestCase(7, AccountStatus.Disabled, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
 
-    [TestCase(7, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.Bacs, PaymentScheme.Bacs)]
+    [TestCase(6.5, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
     [TestCase(7, AccountStatus.InboundPaymentsOnly, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
 
     public void ShouldIsValidAccountStateReturnsTrueWhenAccountBalanceIsSufficient(decimal balance, AccountStatus accountStatus, AllowedPaymentSchemes allowedPaymentSchemes, PaymentScheme scheme)
@@ -275,7 +273,6 @@ public class PaymentValidatorUnitTests
     [TestCase(-1, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
     [TestCase(0, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
     [TestCase(4.5, AllowedPaymentSchemes.FasterPayments, PaymentScheme.FasterPayments)]
-
     public void ShouldIsValidAccountStateReturnsFalseWhenAccountBalanceIsLow(decimal balance, AllowedPaymentSchemes allowedPaymentSchemes, PaymentScheme scheme)
     {
         firstAccount!.Balance = balance;

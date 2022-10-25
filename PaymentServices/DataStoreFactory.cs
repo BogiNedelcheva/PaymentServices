@@ -4,7 +4,7 @@ using PaymentServices.Data;
 
 namespace PaymentServices
 {
-    public class AccountDataStoreFactory:IDataStoreFactory
+    public class DataStoreFactory:IDataStoreFactory
     {
         public IDataStore CreateDataStore(string dataStoreType)
         {
@@ -13,7 +13,13 @@ namespace PaymentServices
                 dataStoreType = ConfigurationManager.AppSettings["DataStoreType"];
             }
 
-            return new AccountDataStore();
+            if (dataStoreType != "Backup")
+            {
+                return new AccountDataStore();
+
+            }
+
+            return new BackupAccountDataStore();
         }
     }
 }
