@@ -67,9 +67,26 @@ public class PaymentServicesUnitTests
     }
 
     [Test]
-    public void ShouldBackUpDsataStoreReturnsAccount()
+    public void GetAaccountAndReturnNotNull()
     {
-        var backupDataStoreFactory = dataStoreFactory!.CreateDataStore(BACKUP_ACCOUNT_DATASTORE_TYPE);
+        MakePaymentRequest request = new MakePaymentRequest()
+        {
+            Amount = AMMOUNT,
+            CreditorAccountNumber = firstAccount!.AccountNumber!,
+            DebtorAccountNumber = firstAccount.AccountNumber!,
+            PaymentDate = DateTime.Now,
+            PaymentScheme = PaymentScheme.Chaps
+        };
+
+        var account = dataStore!.GetAccount(request.DebtorAccountNumber);
+
+        Assert.AreNotEqual(null, account);
+    }
+
+    [Test]
+    public void BackUpDsataStoreShouldReturnsAccount()
+    {
+        this.dataStore = dataStoreFactory!.CreateDataStore(BACKUP_ACCOUNT_DATASTORE_TYPE);
 
         this.paymentValidator = new PaymentValidator(dataStore!);
 
@@ -92,24 +109,7 @@ public class PaymentServicesUnitTests
     }
 
     [Test]
-    public void ShouldGetAaccountAndReturnNotNull()
-    {
-        MakePaymentRequest request = new MakePaymentRequest()
-        {
-            Amount = AMMOUNT,
-            CreditorAccountNumber = firstAccount!.AccountNumber!,
-            DebtorAccountNumber = firstAccount.AccountNumber!,
-            PaymentDate = DateTime.Now,
-            PaymentScheme = PaymentScheme.Chaps
-        };
-
-        var account = dataStore!.GetAccount(request.DebtorAccountNumber);
-
-        Assert.AreNotEqual(null, account);
-    }
-
-    [Test]
-    public void PaymentShouldFailsWhenAccountIsNull()
+    public void MakePaymentShouldFailsWhenAccountIsNull()
     {
         string accountNumber = String.Empty;
 
@@ -128,7 +128,7 @@ public class PaymentServicesUnitTests
     }
 
     [Test]
-    public void ShouldPaymentFailsWhenIsValidAccountStateIsFalse()
+    public void MakePaymentFailsWhenIsValidAccountStateIsFalse()
     {
         var isValidAccountState = false;
 
@@ -144,7 +144,7 @@ public class PaymentServicesUnitTests
     }
 
     [Test]
-    public void ShouldPaymentWithdrawsCorrectly()
+    public void MakePaymentShouldWithdrawsCorrectly()
     {
         decimal expected = 1.0m;
 
@@ -165,7 +165,7 @@ public class PaymentServicesUnitTests
     }
 
     [Test]
-    public void ShouldMakePaymentUpdateAccountCorrectly()
+    public void MakePaymentShouldUpdateAccountCorrectly()
     {
         var account = dataStore!.GetAccount(ACCOUNT_NUMBER_FIRST);
         account.Balance = 7.5m;
