@@ -5,10 +5,9 @@ using PaymentServices.Data;
 using PaymentServices.Types;
 namespace PaymentServices
 {
-    public  interface  IDataStoreFactory
+    public interface  IDataStoreFactory
     {
-        IDataStore CreateDataStore(string dataStoreType);
+      IDataStore CreateDataStore(string dataStoreType);
         
     }
-
 }
